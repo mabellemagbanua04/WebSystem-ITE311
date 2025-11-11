@@ -7,24 +7,46 @@ use CodeIgniter\Config\BaseConfig;
 class Migrations extends BaseConfig
 {
     /**
-     * Enable/Disable migrations.
+     * --------------------------------------------------------------------------
+     * Enable/Disable Migrations
+     * --------------------------------------------------------------------------
      */
-    public bool $enabled = true;
+    public $enabled = true;
 
     /**
-     * The type of migration numbering.
-     * Options: 'sequential' or 'timestamp'
+     * --------------------------------------------------------------------------
+     * Migration type
+     * --------------------------------------------------------------------------
+     * 'timestamp' or 'sequential'
      */
-    public string $type = 'timestamp';
+    public $type = 'timestamp';
 
     /**
-     * The table used to keep track of migrations.
+     * --------------------------------------------------------------------------
+     * Migrations table
+     * --------------------------------------------------------------------------
+     * This table keeps track of which migrations have run.
      */
-    public string $table = 'migrations';
+    public $table = 'sequential';
 
     /**
-     * Filename timestamp format.
+     * --------------------------------------------------------------------------
+     * Timestamp format
+     * --------------------------------------------------------------------------
      */
-    public string $timestampFormat = 'Y-m-d-His';
+    public $timestampFormat = 'YmdHis';
+
+    /**
+     * --------------------------------------------------------------------------
+     * Migration namespace
+     * --------------------------------------------------------------------------
+     */
+    public $namespace = 'App\Database\Migrations';
+
+    /**
+     * --------------------------------------------------------------------------
+     * Directory where migrations are stored
+     * --------------------------------------------------------------------------
+     */
+    public $directory = APPPATH . 'Database/Migrations/';
 }
-

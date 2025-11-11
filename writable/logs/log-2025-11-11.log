@@ -62,3 +62,24 @@ Stack trace:
 #10 C:\xampp\htdocs\ITE311-MAGBANUA\system\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
 #11 C:\xampp\htdocs\ITE311-MAGBANUA\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
 #12 {main}
+CRITICAL - 2025-11-11 08:08:34 --> ErrorException: Namespace declaration statement has to be the very first statement or after any declare call in the script
+[Method: CLI, Route: migrate]
+in APPPATH\Config\Migrations.php on line 4.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2025-11-11 08:16:03 --> ErrorException: Undefined property: Config\Database::$defaultGroup
+[Method: CLI, Route: migrate]
+in SYSTEMPATH\Database\MigrationRunner.php on line 143.
+ 1 SYSTEMPATH\Database\MigrationRunner.php(143): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: Config\\Database::$defaultGroup', 'C:\\xampp\\htdocs\\ITE311-MAGBANUA\\system\\Database\\MigrationRunner.php', 143)
+ 2 SYSTEMPATH\Config\Services.php(421): CodeIgniter\Database\MigrationRunner->__construct(Object(Config\Migrations), null)
+ 3 SYSTEMPATH\Config\BaseService.php(312): CodeIgniter\Config\Services::migrations(Object(Config\Migrations), null, false)
+ 4 SYSTEMPATH\Config\BaseService.php(251): CodeIgniter\Config\BaseService::__callStatic('migrations', [...])
+ 5 SYSTEMPATH\Config\Services.php(416): CodeIgniter\Config\BaseService::getSharedInstance('migrations', null, null)
+ 6 SYSTEMPATH\Config\BaseService.php(321): CodeIgniter\Config\Services::migrations()
+ 7 SYSTEMPATH\Config\BaseService.php(202): CodeIgniter\Config\BaseService::__callStatic('migrations', [])
+ 8 SYSTEMPATH\Common.php(995): CodeIgniter\Config\BaseService::get('migrations')
+ 9 SYSTEMPATH\Commands\Database\Migrate.php(70): service('migrations')
+10 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Database\Migrate->run([])
+11 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+12 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
+13 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+14 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))

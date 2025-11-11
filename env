@@ -30,6 +30,7 @@
 # DATABASE
 #--------------------------------------------------------------------
 
+<<<<<<< HEAD
 # database.default.hostname = localhost
 # database.default.database = ci4
 # database.default.username = root
@@ -37,6 +38,15 @@
 # database.default.DBDriver = MySQLi
 # database.default.DBPrefix =
 # database.default.port = 3306
+=======
+ database.default.hostname = localhost
+ database.default.database = lms_Magbanua
+ database.default.username = root
+ database.default.password = 
+ database.default.DBDriver = MySQLi
+ database.default.DBPrefix =
+ database.default.port = 3306
+>>>>>>> e7656a49fcdc25711b595c231edcadbb8650cb12
 
 # If you use MySQLi as tests, first update the values of Config\Database::$tests.
 # database.tests.hostname = localhost
