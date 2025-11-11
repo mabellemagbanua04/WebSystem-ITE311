@@ -1,0 +1,20 @@
+CRITICAL - 2025-11-09 07:38:40 --> ParseError: syntax error, unexpected variable "$config", expecting "function" or "const"
+[Method: CLI, Route: make:migration/CreateUsersTable]
+in APPPATH\Config\Migrations.php on line 19.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\ITE311-MAGBANUA\\app\\Config\\Migrations.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Config\\Migrations')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Config\\Migrations')
+ 4 SYSTEMPATH\Config\Factories.php(298): class_exists('Config\\Migrations')
+ 5 SYSTEMPATH\Config\Factories.php(217): CodeIgniter\Config\Factories::locateClass([...], 'Config\\Migrations')
+ 6 SYSTEMPATH\Config\Factories.php(160): CodeIgniter\Config\Factories::getDefinedInstance([...], 'Config\\Migrations', [])
+ 7 SYSTEMPATH\Config\Factories.php(189): CodeIgniter\Config\Factories::__callStatic('config', [])
+ 8 SYSTEMPATH\Common.php(208): CodeIgniter\Config\Factories::get('config', 'Config\\Migrations')
+ 9 SYSTEMPATH\Commands\Generators\MigrationGenerator.php(126): config('Config\\Migrations')
+10 SYSTEMPATH\CLI\GeneratorTrait.php(458): CodeIgniter\Commands\Generators\MigrationGenerator->basename('C:\\xampp\\htdocs\\ITE311-MAGBANUA\\app\\Database\\Migrations\\CreateUsersTable.php')
+11 SYSTEMPATH\CLI\GeneratorTrait.php(128): CodeIgniter\Commands\Generators\MigrationGenerator->buildPath('App\\Database\\Migrations\\CreateUsersTable')
+12 SYSTEMPATH\Commands\Generators\MigrationGenerator.php(95): CodeIgniter\Commands\Generators\MigrationGenerator->generateClass([...])
+13 SYSTEMPATH\CLI\Commands.php(74): CodeIgniter\Commands\Generators\MigrationGenerator->run([...])
+14 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('make:migration', [...])
+15 SYSTEMPATH\Boot.php(388): CodeIgniter\CLI\Console->run()
+16 SYSTEMPATH\Boot.php(133): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+17 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
